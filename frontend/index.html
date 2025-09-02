@@ -5,30 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Smart Dustbin — Login</title>
     <link rel="stylesheet" href="assets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
     <header>
-      <h1>Smart Dustbin</h1>
-      <p class="subtitle">Classify waste from a photo — responsibly.</p>
+      <div class="header-content">
+        <h1><i class="fas fa-recycle"></i> Smart Dustbin</h1>
+        <p class="subtitle">AI-Powered Waste Classification System</p>
+      </div>
     </header>
 
-    <main class="card">
-      <h2>Login</h2>
-      <div class="form-row">
-        <label>Username</label>
-        <input id="username" type="text" placeholder="you@example.com" />
+    <main class="card" style="max-width: 480px;">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <i class="fas fa-user-circle" style="font-size: 4rem; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+        <h2 style="margin: 0;">Welcome Back</h2>
+        <p style="color: var(--fg-secondary); margin: 0.5rem 0 0 0;">Sign in to continue to your dashboard</p>
       </div>
+
       <div class="form-row">
-        <label>Password</label>
-        <input id="password" type="password" placeholder="••••••••" />
+        <label style="font-weight: 600; color: var(--fg-secondary); margin-bottom: 0.5rem;"><i class="fas fa-user"></i> Username</label>
+        <input id="username" type="text" placeholder="Enter your username" style="font-size: 1rem;" />
       </div>
-      <button id="loginBtn">Sign in</button>
-      <p id="loginMsg" class="muted"></p>
-      <p class="muted small">Prototype login accepts any non-empty username & password.</p>
+      
+      <div class="form-row">
+        <label style="font-weight: 600; color: var(--fg-secondary); margin-bottom: 0.5rem;"><i class="fas fa-lock"></i> Password</label>
+        <input id="password" type="password" placeholder="Enter your password" style="font-size: 1rem;" />
+      </div>
+      
+      <button id="loginBtn" style="width: 100%; margin: 1rem 0; font-size: 1.1rem; padding: 1rem;">
+        <i class="fas fa-sign-in-alt"></i> Sign In
+      </button>
+      
+      <p id="loginMsg" class="muted" style="text-align: center; margin: 1rem 0;"></p>
+      
+      <div style="background: rgba(79, 124, 255, 0.1); border: 1px solid rgba(79, 124, 255, 0.3); border-radius: var(--border-radius); padding: 1rem; margin-top: 1rem;">
+        <p class="muted small" style="margin: 0; text-align: center;">
+          <i class="fas fa-info-circle" style="color: var(--accent-primary);"></i>
+          <strong>Demo Mode:</strong> Use any non-empty username and password to continue
+        </p>
+      </div>
     </main>
 
     <footer>
-      <a href="overview.html">Overview</a>
+      <div class="footer-content">
+        <p><i class="fas fa-leaf"></i> Helping create a sustainable future through smart waste management</p>
+        <a href="overview.html"><i class="fas fa-info-circle"></i> Learn More About Our System</a>
+      </div>
     </footer>
 
     <script src="assets/app.js"></script>
