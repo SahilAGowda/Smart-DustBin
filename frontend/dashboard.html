@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Dustbin — Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Smart Dustbin</h1>
+      <p class="subtitle">Dashboard</p>
+    </header>
+
+    <main class="card">
+      <div class="toolbar">
+        <a href="overview.html">Overview</a>
+        <a href="index.html" id="logoutLink">Logout</a>
+      </div>
+
+      <h2>Scan an Item</h2>
+      <div class="uploader">
+        <input type="file" id="fileInput" accept="image/*" />
+        <button id="scanBtn">Scan</button>
+      </div>
+
+      <div id="preview" class="preview"></div>
+
+      <div id="result" class="result hidden">
+        <h3>Result</h3>
+        <p><strong>Object:</strong> <span id="objectLabel">—</span></p>
+        <p><strong>Waste Type:</strong> <span id="wasteType">—</span></p>
+        <p><strong>Confidence:</strong> <span id="confidence">—</span></p>
+        <div class="progress-outer">
+          <div id="recycleBar" class="progress-inner"></div>
+        </div>
+        <p class="muted small">Estimated recyclability %</p>
+        <div id="modelInfo" class="model-info">
+          <p class="muted small">Model: <span id="modelStatus">—</span> | Device: <span id="deviceInfo">—</span></p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <a href="overview.html">Overview</a>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
